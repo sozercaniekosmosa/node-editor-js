@@ -1,0 +1,87 @@
+@import "tailwind";
+
+* {
+  //outline: 1px solid rgba(0, 0, 0, 0.05);
+  //margin: 1px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-size: .8em;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.no-select {
+  -webkit-user-select: none;
+}
+
+.ev-none {
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  //border-radius: 20px;
+  border: transparent;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.rotY {
+  animation: spin 1s infinite linear;
+}
+
+.zoom-out-container {
+  position: relative;
+}
+
+.zoom-out {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  animation: growDisappear .5s ease;
+}
+
+@keyframes growDisappear {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  99.9% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.header-set {
+  outline: 1px dashed #6c6c6c;
+}
