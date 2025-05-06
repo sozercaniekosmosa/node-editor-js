@@ -1,6 +1,8 @@
 # node-editor-js
 Simple Node Editor (using SVG)
 
+Demo: [node editor](https://sozercaniekosmosa.github.io/node-editor-js/dist/)
+
 Простой редактор "Узловых элементов"
 
 Данный пример базируется на использовании технологии SVG
